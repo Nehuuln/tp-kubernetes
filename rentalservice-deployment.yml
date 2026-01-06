@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rentalservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rentalservice
+  template:
+    metadata:
+      labels:
+        app: rentalservice
+    spec:
+      containers:
+        - image: nehuuln/rentalservice:latest
+          imagePullPolicy: IfNotPresent
+          name: rentalservice
+      restartPolicy: Always
