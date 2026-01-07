@@ -13,7 +13,7 @@ public class BonjourController {
 
     private static final Logger logger = LoggerFactory.getLogger(BonjourController.class);
 
-    @Value("${php.service.url:http://php-service}")
+    @Value("${php.service.url}")
     private String phpServiceUrl;
 
     @GetMapping("/bonjour")
